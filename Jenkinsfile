@@ -20,7 +20,7 @@ node('slave') {
 	}
 	
 	stage ('Deployment'){
-		sh 'cp target/*.war /tmp/tomcat/webapps'
+		sh 'cp target/*.war /tmp/tomcat8/webapps'
 	}
 	stage ('Notification'){
 		//slackSend color: 'good', message: 'Deployment Sucessful'
